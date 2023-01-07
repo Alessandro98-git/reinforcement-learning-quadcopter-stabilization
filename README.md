@@ -11,66 +11,48 @@ We developed the project in a virtual environment, using the AirSim simulator, b
 The idea was to initially simulate it in a virtual environment, to train the agent through deep RL, developing an MLP that runs with low latency.
 Future steps are the deployment of the solution, safely, on a physical drone.
 
-### Environment setup
-1. Install Unreal Engine (4.27 suggested) from [Epic Games Launcher](https://store.epicgames.com/it/download).
+### Setup Unreal and Visual Studio for AirSim
 
-2. Install Visual Studio 2019
+The project was tested on AirSim 1.7.0 + Visual Studio 2019 and AirSim 1.8.1 + Visual Studio 2022
+1.	Install Unreal Engine 4.27 (install epic games launcher, put account, download Engine), open it and "fix now"
+2.	Download AirSim prebuilt source code and the environment that you want
+3.	Place the Environment in AirSim/Unreal/Environment
+4.0	Install Visual Studio 2019 + C++ dev / Python
+4.1	https://microsoft.github.io/AirSim/build_windows/
+	Use Visual Studio 2019 Developer Command Prompt with Admin priv to run AirSim-1.7.0-windows/build.cmd
+5.	https://microsoft.github.io/AirSim/unreal_blocks/
+	Install .net framework 4.6.2 Developer (SDK), desktop runtime 3.1.24 (asks for it anyways)
+	Run AirSim-1.7.0-windows/Unreal/Environments/Blocks/update_from_git.bat
+6.	Open (AirSim-1.7.0-windows/Unreal/Environments/Blocks/Blocks).sln with Visual Studio 2022 (or 2019 if the only installed), set Blocks as default (startup) Project, 	DebugGame Editor & Win64, press F5
+	https://docs.microsoft.com/it-it/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2022
+7.	Once Unreal is open with the project, click "Play" and use keyboard to move wtc
+8.	Unreal might lag if there is another window on top: Edit->Editor preferences->search Performance->disable "Use less CPU when in background"
 
-3. Install C++ dev
+### Setup python environment for AirSim and RL
 
-4. Install Python
-
-5. Download [AirSim](https://microsoft.github.io/AirSim/build_windows/) prebuilt source code and the environment of your choice.
-
-6. Place the Environment in AirSim/Unreal/Environment
-
-5. Use Visual Studio 2019 Developer Command Prompt with Admin privileges to run AirSim-1.7.0-windows/build.cmd
-
-6. Follow the [tutorial](https://microsoft.github.io/AirSim/unreal_blocks/) in order to setup Blocks Environment for AirSim
-
-7. Install [.net framework](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net462) 4.6.2 Developer (SDK), desktop runtime 3.1.24 
-
-8. Run AirSim-1.7.0-windows/Unreal/Environments/Blocks/update_from_git.bat
-
-9. Add settings.json inside airsim folder (settings.json is a file containing all the quadricopter settings)
-
-10. Open .sln with Visual Studio 2022 (or 2019 if the only installed), as suggested in this [link](https://docs.microsoft.com/it-it/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2022) set Blocks as default Project, DebugGame Editor & Win64. Finally press F5 
-
-11. Once Unreal is open with the project, click "Play" and use the keyboard to move the drone.
-
-### Python interface setup with AirSim
-
-1. Take AirSim-1.7.0-windows/PythonClient/multirotor/hello_drone.py
-
-2. Delete first line of import.
-
-3. Create an Anaconda environment.
-
-4. Install the following libraries
-    ```bash
-    pip install numpy
-    pip install opencv-python
-    pip install msgpack-rpc-python
-    pip install airsim
-    ```
-5. Install Visual Studio & recommended python extensions (optional)
-
-6. Unreal might lag if there is another window on top. To avoid this go in Unreal Engine settings: Edit->Editor preferences->search Performance->disable "Use less CPU when in background"
-
-### Running the sample project
-1. Clone the repository
-    ```bash
-    git clone https://github.com/lap98/RL-Drone-Stabilization.git
-    ```
-2. Open the environment in Unreal Engine
-
-3. Run first.py in order to control the drone
-
-### Setup and execute the reinforcement learning
-
-In order to use TF-Agents library:
-```bash
+1. Create an Anaconda environment (https://microsoft.github.io/AirSim/apis/) using python 3.9:
+```
+pip install numpy, opencv-python, msgpack-rpc-python, airsim
+```
+3. Install Visual Studio Code & recommended python extensions
+4. In order to use TF-Agents library:
+```
 conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
 pip install tensorflow==2.9
-pip install tf-agents==0.13.0
+pip install tf-agents==0.13
+pip install tensorflow-probability==0.17
+pip install protobuf==3.20
 ```
+
+### Running the sample project
+
+1. Clone the repository
+```bash
+git clone https://github.com/lap98/RL-Drone-Stabilization.git
+```
+2. Open the environment in Unreal Engine
+3. Run first.py in order to control the drone
+
+### Execute the reinforcement learning
+
+Simply execute one of the scripts, e.g. "training_TD3"
