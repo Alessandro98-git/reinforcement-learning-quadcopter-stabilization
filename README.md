@@ -1,15 +1,17 @@
-# RL-Drone-Stabilization
+# Deep Reinforcement Learning based Robust Quadcopter Stabilization System
+Neural Networks – Deep Reinforcement Learning – DDPG – SAC – TD3 – PPO
+## Advanced Deep Learning Models and Methods - Research Project, ay 2021-2022
 
-The aim of the project is to implement a Reinforcement Learning Architecture able to control aerial quadricopters, even in commercial drones.
-The scenario concerns the advanced stabilization of a drone in critical situations such as high-speed wind, recovery due to a free fall, a propeller failure and any kind of features that could ensure safety during a flight in densely populated areas.
+<em>The aim of the project is to implement a Reinforcement Learning Architecture able to control aerial quadricopters, even in commercial drones.
+The scenario concerns the advanced stabilization of a drone in critical situations such as high-speed wind, recovery due to a free fall, a propeller failure and any kind of features that could ensure safety during a flight in densely populated areas.</em>
 
-First of all we developed the project in a virtual environment, using the AirSim simulator, based on Unreal Engine, which was created precisely for the purpose of supporting the development of reinforcement learning applications for vehicles and quadcopters.
+### Problem formulation
 
+We developed the project in a virtual environment, using the AirSim simulator, based on Unreal Engine, which was created precisely for the purpose of supporting the development of reinforcement learning applications for vehicles and quadcopters.
 The idea was to initially simulate it in a virtual environment, to train the agent through deep RL, developing an MLP that runs with low latency.
-In the future it would be interesting to try to deploy, safely, on a physical drone.
+Future steps are the deployment of the solution, safely, on a physical drone.
 
-
-## Environmental Setup
+### Environment setup
 1. Install Unreal Engine (4.27 suggested) from [Epic Games Launcher](https://store.epicgames.com/it/download).
 
 2. Install Visual Studio 2019
@@ -36,7 +38,7 @@ In the future it would be interesting to try to deploy, safely, on a physical dr
 
 11. Once Unreal is open with the project, click "Play" and use the keyboard to move the drone.
 
-## Python Interface with AirSim
+### Python interface setup with AirSim
 
 1. Take AirSim-1.7.0-windows/PythonClient/multirotor/hello_drone.py
 
@@ -53,9 +55,9 @@ In the future it would be interesting to try to deploy, safely, on a physical dr
     ```
 5. Install Visual Studio & recommended python extensions (optional)
 
-6. Unreal might lag if there is another window on top.To avoid this go in Unreal Engine settings: Edit->Editor preferences->search Performance->disable "Use less CPU when in background"
+6. Unreal might lag if there is another window on top. To avoid this go in Unreal Engine settings: Edit->Editor preferences->search Performance->disable "Use less CPU when in background"
 
-## Run the project
+### Running the sample project
 1. Clone the repository
     ```bash
     git clone https://github.com/lap98/RL-Drone-Stabilization.git
@@ -64,7 +66,7 @@ In the future it would be interesting to try to deploy, safely, on a physical dr
 
 3. Run first.py in order to control the drone
 
-## Reinforcement learning
+### Setup and execute the reinforcement learning
 
 In order to use TF-Agents library:
 ```bash
