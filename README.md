@@ -54,4 +54,4 @@ git clone https://github.com/lap98/RL-Drone-Stabilization.git
 
 ### Execute the reinforcement learning algorithms
 
-Simply execute one of the scripts, e.g. "training_TD3".
+Make sure the virtual environment is running inside Unreal, then simply execute one of the scripts, e.g. "training_TD3".
