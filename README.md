@@ -25,6 +25,7 @@ The project was tested on AirSim 1.7.0 + Visual Studio 2019 and AirSim 1.8.1 + V
 6.	Open (AirSim-1.7.0-windows/Unreal/Environments/Blocks/Blocks).sln with Visual Studio 2022 (or 2019 if the only installed), set Blocks as default (startup) Project, DebugGame Editor & Win64, press F5 (https://docs.microsoft.com/it-it/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2022)
 7.	Once Unreal is open with the project, click "Play" and use keyboard to move
 8.	Unreal might lag if there is another window on top: Edit->Editor preferences->search Performance->disable "Use less CPU when in background"
+9.	Copy the settings.json file inside the directory "C:\Users\<user>\Documents\AirSim"
 
 ### Setup Python environment for AirSim and RL
 
