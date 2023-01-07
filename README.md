@@ -17,15 +17,13 @@ The project was tested on AirSim 1.7.0 + Visual Studio 2019 and AirSim 1.8.1 + V
 1.	Install Unreal Engine 4.27 (install epic games launcher, put account, download Engine), open it and "fix now"
 2.	Download AirSim prebuilt source code and the environment that you want
 3.	Place the Environment in AirSim/Unreal/Environment
-4.0	Install Visual Studio 2019 + C++ dev / Python
-4.1	https://microsoft.github.io/AirSim/build_windows/
-	Use Visual Studio 2019 Developer Command Prompt with Admin priv to run AirSim-1.7.0-windows/build.cmd
-5.	https://microsoft.github.io/AirSim/unreal_blocks/
-	Install .net framework 4.6.2 Developer (SDK), desktop runtime 3.1.24 (asks for it anyways)
-	Run AirSim-1.7.0-windows/Unreal/Environments/Blocks/update_from_git.bat
-6.	Open (AirSim-1.7.0-windows/Unreal/Environments/Blocks/Blocks).sln with Visual Studio 2022 (or 2019 if the only installed), set Blocks as default (startup) Project, 	DebugGame Editor & Win64, press F5
-	https://docs.microsoft.com/it-it/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2022
-7.	Once Unreal is open with the project, click "Play" and use keyboard to move wtc
+4.	Install Visual Studio 2019 + C++ dev / Python
+	<br>Use Visual Studio 2019 Developer Command Prompt with Admin priv to run AirSim-1.7.0-windows/build.cmd (https://microsoft.github.io/AirSim/build_windows/)
+5.	(https://microsoft.github.io/AirSim/unreal_blocks/)
+	<br>Install .net framework 4.6.2 Developer (SDK), desktop runtime 3.1.24 (asks for it anyways)
+	<br>Run AirSim-1.7.0-windows/Unreal/Environments/Blocks/update_from_git.bat
+6.	Open (AirSim-1.7.0-windows/Unreal/Environments/Blocks/Blocks).sln with Visual Studio 2022 (or 2019 if the only installed), set Blocks as default (startup) Project, DebugGame Editor & Win64, press F5 (https://docs.microsoft.com/it-it/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2022)
+7.	Once Unreal is open with the project, click "Play" and use keyboard to move
 8.	Unreal might lag if there is another window on top: Edit->Editor preferences->search Performance->disable "Use less CPU when in background"
 
 ### Setup Python environment for AirSim and RL
