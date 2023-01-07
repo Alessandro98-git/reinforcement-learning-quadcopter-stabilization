@@ -28,7 +28,7 @@ The project was tested on AirSim 1.7.0 + Visual Studio 2019 and AirSim 1.8.1 + V
 7.	Once Unreal is open with the project, click "Play" and use keyboard to move wtc
 8.	Unreal might lag if there is another window on top: Edit->Editor preferences->search Performance->disable "Use less CPU when in background"
 
-### Setup python environment for AirSim and RL
+### Setup Python environment for AirSim and RL
 
 1. Create an Anaconda environment (https://microsoft.github.io/AirSim/apis/) using python 3.9:
 ```
@@ -55,4 +55,4 @@ git clone https://github.com/lap98/RL-Drone-Stabilization.git
 
 ### Execute the reinforcement learning algorithms
 
-Simply execute one of the scripts, e.g. "training_TD3"
+Simply execute one of the scripts, e.g. "training_TD3".
