@@ -44,7 +44,7 @@ pip install tensorflow-probability==0.17
 pip install protobuf==3.20
 ```
 
-### Running the sample project
+### Run the sample project
 
 1. Clone the repository
 ```bash
