@@ -53,6 +53,6 @@ git clone https://github.com/lap98/RL-Drone-Stabilization.git
 2. Open the environment in Unreal Engine
 3. Run first.py in order to control the drone
 
-### Execute the reinforcement learning
+### Execute the reinforcement learning algorithms
 
 Simply execute one of the scripts, e.g. "training_TD3"
